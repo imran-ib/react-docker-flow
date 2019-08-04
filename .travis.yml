@@ -4,6 +4,5 @@ services: -docker
 before-install:
   - docker build -t imranirshad/react-docker-flow -f Dockerfile.dev .
 
-# scripts
 script:
   - docker run imranirshad/react-docker-flow npm run test -- --coverage
