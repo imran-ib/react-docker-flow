@@ -1,8 +1,8 @@
-sudo: require
+sudo: required
 services: -docker
 
-before-install:
+before_install:
   - docker build -t imranirshad/react-docker-flow -f Dockerfile.dev .
-# script
+
 script:
   - docker run imranirshad/react-docker-flow npm run test -- --coverage
